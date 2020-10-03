@@ -1,10 +1,11 @@
-package com.luv2code.springdemo.mvc;
+package com.mvc;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -35,6 +36,14 @@ public class HelloWorldController {
 		String name = request.getParameter("studentName");
 		name = name.toUpperCase();
 		String message = "Yo! " + name;
+		model.addAttribute("message", message);
+		return "helloworld";
+	}
+
+	@RequestMapping("/processFormVersion3")
+	public String processFormVersion3(@RequestParam("studentName") String name, Model model) {
+		logger.debug("=".repeat(30) + "processFormVersionTwo");
+		String message = "Yo! " + name.toUpperCase();
 		model.addAttribute("message", message);
 		return "helloworld";
 	}

@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.mvc;
+package com.mvc;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
