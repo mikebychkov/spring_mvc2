@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class StudentController {
 
-    private static final Logger logger = LogManager.getLogger(HelloWorldController.class);
+    private static final Logger logger = LogManager.getLogger(StudentController.class);
 
     @RequestMapping("/show-student")
     public String showStudentPage(Model model) {

@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form:form action="process-student" modelAttribute="studentModel">
+<form:form action="process-student" method="post" modelAttribute="studentModel">
 
     <label for="firstName">First name:</label>
     <input type="text" id="firstName" name="firstName" placeholder="First name">
