@@ -13,6 +13,10 @@
 
 <a href="silly/showForm">Silly page</a>
 
+<br><br>
+
+<a href="show-student">Show student</a>
+
 </body>
 
 </html>
