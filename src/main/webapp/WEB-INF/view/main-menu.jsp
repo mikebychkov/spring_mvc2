@@ -17,6 +17,10 @@
 
 <a href="show-student">Show student</a>
 
+<br><br>
+
+<a href="customer/showForm">Customer form</a>
+
 </body>
 
 </html>
