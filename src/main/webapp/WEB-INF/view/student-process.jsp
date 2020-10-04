@@ -5,11 +5,7 @@
 </head>
 <body>
 
-First name: ${studentModel.firstName}
-
-<br><br>
-
-Second name: ${studentModel.secondName}
+Process student info: ${studentModel.firstName} ${studentModel.secondName}
 
 </body>
 </html>

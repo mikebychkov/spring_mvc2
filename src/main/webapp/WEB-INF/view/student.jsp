@@ -9,12 +9,12 @@
 <form:form action="process-student" method="post" modelAttribute="studentModel">
 
     <label for="firstName">First name:</label>
-    <input type="text" id="firstName" name="firstName" placeholder="First name">
+    <form:input type="text" id="firstName" name="firstName" placeholder="First name" path="firstName" />
 
     <br><br>
 
     <label for="secondName">Second name:</label>
-    <input type="text" id="secondName" name="secondName" placeholder="Second name">
+    <form:input type="text" id="secondName" name="secondName" placeholder="Second name" path="secondName" />
 
     <br><br>
 

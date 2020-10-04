@@ -15,7 +15,7 @@ public class StudentController {
 
     @RequestMapping("/show-student")
     public String showStudentPage(Model model) {
-        model.addAttribute("studentModel", new Student());
+        model.addAttribute("studentModel", new Student("Katy", "Perry"));
         return "student";
     }
 
