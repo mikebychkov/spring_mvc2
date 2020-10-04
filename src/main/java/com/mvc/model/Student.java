@@ -1,16 +1,25 @@
 package com.mvc.model;
 
-import java.util.Objects;
+import java.util.*;
 
 public class Student {
 
     private String firstName;
     private String secondName;
+    private String country;
+    private Map<String, String> countryOptions = new LinkedHashMap<>();
+    private String favoriteLanguage;
+    private List<String> operatingSystem = new ArrayList<>();
 
     public Student() {
+        countryOptions.put("DE", "Germany");
+        countryOptions.put("FR", "France");
+        countryOptions.put("BR", "Brazil");
+        countryOptions.put("IN", "India");
     }
 
     public Student(String firstName, String secondName) {
+        this();
         this.firstName = firstName;
         this.secondName = secondName;
     }
@@ -29,6 +38,38 @@ public class Student {
 
     public void setSecondName(String secondName) {
         this.secondName = secondName;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public Map<String, String> getCountryOptions() {
+        return countryOptions;
+    }
+
+    public void setCountryOptions(Map<String, String> countryOptions) {
+        this.countryOptions = countryOptions;
+    }
+
+    public String getFavoriteLanguage() {
+        return favoriteLanguage;
+    }
+
+    public void setFavoriteLanguage(String favoriteLanguage) {
+        this.favoriteLanguage = favoriteLanguage;
+    }
+
+    public List<String> getOperatingSystem() {
+        return operatingSystem;
+    }
+
+    public void setOperatingSystem(List<String> operatingSystem) {
+        this.operatingSystem = operatingSystem;
     }
 
     @Override

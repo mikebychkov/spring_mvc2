@@ -15,7 +15,12 @@ public class StudentController {
 
     @RequestMapping("/show-student")
     public String showStudentPage(Model model) {
-        model.addAttribute("studentModel", new Student("Katy", "Perry"));
+        Student newStudent = new Student("Katy", "Perry");
+        newStudent.setCountry("BR");
+        newStudent.setFavoriteLanguage("C#");
+        newStudent.getOperatingSystem().add("Mac OS");
+        newStudent.getOperatingSystem().add("Linux");
+        model.addAttribute("studentModel", newStudent);
         return "student";
     }
 
