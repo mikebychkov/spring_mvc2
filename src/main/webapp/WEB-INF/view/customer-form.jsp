@@ -36,6 +36,12 @@
 
     <br><br>
 
+    <label for="courseCode">Course Code: </label>
+    <form:input type="text" path="courseCode" id="courseCode" />
+    <form:errors path="courseCode" cssClass="error" />
+
+    <br><br>
+
     <input type="submit" value="Submit">
 
 </form:form>

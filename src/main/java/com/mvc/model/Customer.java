@@ -1,5 +1,7 @@
 package com.mvc.model;
 
+import com.mvc.validation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -17,6 +19,9 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Must be 5 letters/digits")
     private String postalCode;
+
+    @CourseCode(value = "VR", message = "Must start with VR")
+    private String courseCode;
 
     public Customer() {
     }
@@ -51,5 +56,13 @@ public class Customer {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
