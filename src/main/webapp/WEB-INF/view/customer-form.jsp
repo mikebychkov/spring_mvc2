@@ -20,8 +20,19 @@
 
     <label for="lastName">Last name (*): </label>
     <form:input type="text" path="lastName" id="lastName" />
-
     <form:errors path="lastName" cssClass="error" />
+
+    <br><br>
+
+    <label for="freePasses">Free passes: </label>
+    <form:input type="text" path="freePasses" id="freePasses" />
+    <form:errors path="freePasses" cssClass="error" />
+
+    <br><br>
+
+    <label for="postalCode">Postal Code: </label>
+    <form:input type="text" path="postalCode" id="postalCode" />
+    <form:errors path="postalCode" cssClass="error" />
 
     <br><br>
 

@@ -1,6 +1,8 @@
 package com.mvc;
 
 import com.mvc.model.Customer;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,8 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
+
+    private static final Logger logger = LogManager.getLogger(CustomerController.class);
 
     @InitBinder
     public void initBinder(WebDataBinder dataBinder) {
@@ -31,6 +35,9 @@ public class CustomerController {
     @RequestMapping("/processForm")
     public String processForm(@Valid @ModelAttribute("customer") Customer customer,
                               BindingResult bindingResult) {
+
+        logger.debug(bindingResult);
+
         if (bindingResult.hasErrors()) {
             return "customer-form";
         }
